@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/clash-tournament/static/css/main.28959a3c.css",
+    "main.js": "/clash-tournament/static/js/main.74ffed7b.js",
+    "index.html": "/clash-tournament/index.html",
+    "main.28959a3c.css.map": "/clash-tournament/static/css/main.28959a3c.css.map",
+    "main.74ffed7b.js.map": "/clash-tournament/static/js/main.74ffed7b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28959a3c.css",
+    "static/js/main.74ffed7b.js"
+  ]
+}
