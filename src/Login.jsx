@@ -35,7 +35,7 @@ export default function LoginPage() {
           <button onClick={tryLogin} style={{ flex: 1, padding: '0.6rem', borderRadius: 6, background: '#f59e0b', border: 'none', fontWeight: 700 }}>Login</button>
           <button onClick={() => { setName(''); setPass(''); }} style={{ padding: '0.6rem', borderRadius: 6, background: '#111827', border: '1px solid #334155' }}>Clear</button>
         </div>
-        <p style={{ marginTop: 12, color: '#94a3b8' }}>Demo creds: admin/adminpass or super/superpass</p>
+        {/* Demo credentials removed from UI for security */}
       </div>
     </div>
   );
