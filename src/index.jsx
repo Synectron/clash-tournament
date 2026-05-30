@@ -6,7 +6,7 @@ import LoginPage from './Login';
 const root = createRoot(document.getElementById('root'));
 const renderApp = () => {
   const path = window.location.pathname;
-  if (path === '/login') {
+  if (path === '/login' || path === '/login/') {
     root.render(
       <React.StrictMode>
         <LoginPage />
@@ -20,5 +20,7 @@ const renderApp = () => {
     );
   }
 };
+
+window.addEventListener('popstate', renderApp);
 
 renderApp();
