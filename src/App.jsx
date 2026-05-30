@@ -259,6 +259,14 @@ function App() {
     } catch (e) {}
   };
 
+  const clearPlayers = () => {
+    setPlayers([]);
+    setSelectedPlayerIds([]);
+    try {
+      localStorage.removeItem('clash-players');
+    } catch (e) {}
+  };
+
   const logout = () => {
     localStorage.removeItem('clash-token');
     localStorage.removeItem('clash-user');
@@ -387,17 +395,20 @@ function App() {
               </div>
             </div>
             {user ? (
-              <div className="player-controls" style={{ marginBottom: 12 }}>
+              <div className="player-controls" style={{ marginBottom: 12, display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
                 <input
                   type="text"
                   placeholder="Add player name"
                   value={newPlayerName}
                   onChange={(e) => setNewPlayerName(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && addPlayer()}
-                  style={{ padding: '0.5rem', borderRadius: 8, marginRight: 8 }}
+                  style={{ padding: '0.5rem', borderRadius: 8, flex: '1 1 240px' }}
                 />
                 <button className="btn-generate" onClick={addPlayer} type="button">
                   Add Player
+                </button>
+                <button className="btn-reset" onClick={clearPlayers} type="button">
+                  Clear All Players
                 </button>
               </div>
             ) : (
